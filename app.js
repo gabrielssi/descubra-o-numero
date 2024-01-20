@@ -1,3 +1,4 @@
+let numeroMax = 15;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -9,7 +10,7 @@ function exibirTextoNaTela(tag, texto) {
 
 function exibirMensagemInicial() {
   exibirTextoNaTela('h1', 'Descubra o número!');
-  exibirTextoNaTela('p', 'Escolha um número de 1 e 10');
+  exibirTextoNaTela('p', `Escolha um número de 1 e ${numeroMax}`);
 }
 
 exibirMensagemInicial();
@@ -35,7 +36,7 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-  return parseInt(Math.random() * 10 + 1);
+  return parseInt(Math.random() * numeroMax + 1);
 }
 
 function limparCampo() {
